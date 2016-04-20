@@ -1,0 +1,66 @@
+<html>
+<head>
+    <script>
+        function doJsonAction() {
+            document.getElementById('jsonResult').innerHTML = "{ should bring JSON back here!!  }";
+            // Animal  = String species;  String name;    boolean makeSound;  String sound
+            //     ie;  "Birds", "Robin", true, "Tweet tweet!"
+            // Vehicle =  String make; String name; String fuel;  String color;
+            //     ie;  "Yamaha", "V Star 1300", "gas", "black/red"
+        }
+    </script>
+</head>
+<body>
+
+<form>
+<table>
+    <tr>
+        <td width="100">
+            <img src="http://static3.businessinsider.com/image/51b5fc246bb3f7f33a000017/19-unlikely-animals-who-are-best-friends.jpg" width="90"/>        </td>
+        <td>
+            <select name="species">
+                <option>Reptiles</option>
+                <option>Mammals</option>
+                <option>Birds</option>
+            </select>        </td>
+        <td>
+            <input type="text" placeholder="name" name="name"/>        </td>
+
+        <td>Makes a sound:<br>
+            <input type="radio" name="makeSound" value="true" checked> True &nbsp;
+            <input type="radio" name="makeSound" value="false"> False        </td>
+        <td>
+            <input type="text" name="sound" placeholder="sound"/>        </td>
+    </tr>
+    <tr>
+        <td><br>
+            <img src="http://i.telegraph.co.uk/multimedia/archive/01868/BMWsummary_1868308i.jpg" width="90"/></td>
+        <td>
+            <select name="make">
+                <option>Ford</option>
+                <option>GM</option>
+                <option>Yamaha</option>
+                <option>Honda</option>
+                <option>Toyota</option>
+                <option>Nissan</option>
+            </select>        </td>
+        <td>
+            <input type="text" placeholder="name" name="name"/>        </td>
+        <td>Runs on:
+            <input type="radio" name="fuel" value="true"> Gas<br>
+            <input type="radio" name="fuel" value="electric" checked=""> Electric<br>
+        <input type="radio" name="fuel" value="hydrogen"> Hydrogen    </td>
+        <td>
+            <input type="text" name="color" placeholder="color"/>        </td>
+    </tr>
+</table>
+<div align="center">
+    <button type="button" style="background-color: yellow;" onclick="doJsonAction();">fake JSON</button>  &nbsp;
+    <button type="button" onclick="alert('faking the Ajax call ...');">fake Ajax</button>
+</div>
+<hr>
+<textarea id="jsonResult" rows="10" cols="100"></textarea>
+</form>
+
+</body>
+</html>
